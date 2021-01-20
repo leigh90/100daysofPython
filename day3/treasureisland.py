@@ -22,15 +22,15 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 ''')
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.") 
-user_choice = input('You are at a cross road, Where do you want to go? right or left? ').lower()
+user_choice = input('You are at a cross road, Where do you want to go? right or left? \n').lower()
 
 
 if user_choice == 'left':
-    lake_cross = input('You have come to a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat or "swim" to swim across ').lower()
+    lake_cross = input('You have come to a lake. There is an island in the middle of the lake. Type "wait" to wait for a boat or "swim" to swim across \n').lower()
     if lake_cross == 'wait':
-        door_choice = input('You come a big house with 3 doors a red one, a blue one and a yellow one. Which do you choose? Type "red","blue" or "yellow" to select a door ').lower()
+        door_choice = input('You come a big house with 3 doors a red one, a blue one and a yellow one. Which do you choose? Type "red","blue" or "yellow" to select a door\n ').lower()
         if door_choice == 'yellow':
-            print('Welcome Sensei, Victory is yours')
+            print('Welcome Sensei you found the treasure, Victory is yours ')
         elif door_choice == 'red':
             print('You are burned by fire, GAME OVER!!')
         elif door_choice == 'blue':
