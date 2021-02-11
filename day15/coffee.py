@@ -40,6 +40,9 @@ resource_list = [water, milk, coffee]
 
 # TODO 7. Check if Resources are enough
 def report(drink, resources):
+    """
+    Print the status of resources currently
+    """
     print(f" Coffee: {resources['coffee']}gm")
     print(f" Water: {resources['water']}ml")
     print(f" Milk: {resources['water']}ml")
@@ -70,6 +73,9 @@ def make_drink(drink):
 
 # TODO 3. MAKE A PAYMENT
 def pay(drink):
+    """
+    Recieve Payment,check if payment is sufficient if not return false if more return change
+    """
     qtr_pay = int(input("How many quarters? "))
     dime_pay = int(input("How many dimes? "))
     nickel_pay = int(input(" How many nickels? "))
