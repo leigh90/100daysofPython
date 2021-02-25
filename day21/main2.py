@@ -34,11 +34,19 @@ while game_on:
     screen.update()
     time.sleep(0.1)
     snake.move()
-    # distance is a turtle method that allows you to check the distance between two turtle objects
-    # in this instance the snake head and the food
+
+    # FOOD COLLISION
+    # distance is a turtle method that allows you to check the distance between two turtle objects in this instance the snake head and the food
     if snake.head.distance(food) < 15:
         food.refresh()
         scoreboard.increase_score()
+
+    # DETECT WALL COLLISION
+    if snake.head.xcor() > 280  or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
+        game_on = False
+        scoreboard.game_over()
+
+
 
 
 
