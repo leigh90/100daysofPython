@@ -28,23 +28,22 @@ class Snake:
             new_y = self.full_snake[snake_seg-1].ycor()
             self.full_snake[snake_seg].goto(new_x, new_y)
         self.head.forward(MOVE_DISTANCE)
-    #
+
     def up(self):
-        if self.head.setheading() != DOWN:
+        if self.head.heading() != DOWN:
             self.head.setheading(UP)
 
     def down(self):
-        if self.head.setheading() != UP:
+        if self.head.heading() != UP:
             self.head.setheading(DOWN)
 
     def left(self):
-        if self.head.setheading() != RIGHT:
+        if self.head.heading() != RIGHT:
             self.head.setheading(LEFT)
 
     def right(self):
-        if self.head.setheading() != LEFT:
+        if self.head.heading() != LEFT:
             self.head.setheading(RIGHT)
-
 
     # go up
     # tim.setheading(90)
