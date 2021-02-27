@@ -5,6 +5,7 @@
 
 ## Table of Contents
 [1. Bandname ](https://github.com/leigh90/100daysofPython/tree/master/day1)
+==========
 [2. Tip Calculator](https://github.com/leigh90/100daysofPython/tree/master/day2)
 [3. IfElse](https://github.com/leigh90/100daysofPython/tree/master/day3)
 [4. Treasure Map](https://github.com/leigh90/100daysofPython/tree/master/day4)
