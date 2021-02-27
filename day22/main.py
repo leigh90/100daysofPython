@@ -30,4 +30,8 @@ while game_on:
     time.sleep(0.1)
     screen.update()  # this updates the screen after creating the turtle to cremove the animation
     ball.moveright()
+
+    # detect collision with up and  down walls
+    if ball.ycor() > 330 or ball.ycor() < -350:
+        ball.bounce()
 screen.exitonclick()
