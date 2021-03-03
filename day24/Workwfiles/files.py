@@ -28,10 +28,26 @@
 #     file.write('Badass by +3')
 
 # if all you want to do is add to the contents of the file use 'a' mode
-with open('my_file.txt', mode='a') as file:
-    file.write('I am Ashley, Python Ninja')
+# with open('my_file.txt', mode='a') as file:
+#     file.write('I am Ashley, Python Ninja')
 
-# note that if the file you want to write to does not exist at the time of running python will create the file
-with open('new_file.txt', mode='w') as doodlydo:
-    doodlydo.write("\nI'm with her")
-    #create a new file 'new_file.txt' and writes the tect to it
+score = 10
+newhigh_score = 3
+with open('data.txt', mode='r') as file:
+    high_score = int(file.read())
+    # high_score = int(high_score)
+    print(high_score)
+    print(type(high_score))
+
+
+with open('data.txt', mode="w") as file:
+    if high_score < score:
+        print('less thank')
+        file.write(f'{newhigh_score}')
+
+
+
+# # note that if the file you want to write to does not exist at the time of running python will create the file
+# with open('new_file.txt', mode='w') as doodlydo:
+#     doodlydo.write("\nI'm with her")
+#     #create a new file 'new_file.txt' and writes the tect to it

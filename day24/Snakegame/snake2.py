@@ -52,6 +52,19 @@ class Snake:
         if self.head.heading() != LEFT:
             self.head.setheading(RIGHT)
 
+    def reset(self):
+        """
+        Reset the game when the game ends either by player hitting wall or sellf
+        """
+        # remove the old snake from view by sending it off screen when the gam ends
+        for segment in self.full_snake:
+            segment.goto(1000, 1000)
+        self.full_snake.clear()
+        # recreate the snake again for a new game
+        self.create_snake()
+        # set the head of the snake
+        self.head = self.full_snake[0]
+
     # go up
     # tim.setheading(90)
     # tim.forward(100)
