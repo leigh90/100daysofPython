@@ -33,14 +33,14 @@
 
 score = 10
 newhigh_score = 3
-with open('data.txt', mode='r') as file:
+with open('../../data.txt', mode='r') as file:
     high_score = int(file.read())
     # high_score = int(high_score)
     print(high_score)
     print(type(high_score))
 
 
-with open('data.txt', mode="w") as file:
+with open('../../data.txt', mode="w") as file:
     if high_score < score:
         print('less thank')
         file.write(f'{newhigh_score}')
@@ -51,3 +51,20 @@ with open('data.txt', mode="w") as file:
 # with open('new_file.txt', mode='w') as doodlydo:
 #     doodlydo.write("\nI'm with her")
 #     #create a new file 'new_file.txt' and writes the tect to it
+
+
+
+#NAVIGATING FILE PATHS
+# Absolute File Paths
+# Starts from the root denoted by forward slash /
+
+# Relative File Path Inside the working directory
+# .dot notation means in this current directory check for...
+# ./files.txt
+# Say you are in day24 trying to get to files it would be
+# ./Workwfiles/files.txt
+# Say you are in textfiles and are trying to go up the directory
+# we used to ..(two dots)
+# ../example.file -> would be inside day24
+
+
