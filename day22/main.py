@@ -25,6 +25,7 @@ screen.onkey(key='w', fun=l_paddle.paddleup)
 screen.onkey(key="s", fun=l_paddle.paddledown)
 
 
+
 game_on = True
 
 while game_on:
