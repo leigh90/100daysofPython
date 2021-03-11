@@ -21,6 +21,15 @@ print(doubled_numbers)
 
 # Add conditional
 # new_list = [new_item for item in input if test]
-names = ['Alex','Beth', 'Caroline', 'Dave','Elenor', 'Freddie']
+names = ['Alex', 'Beth', 'Caroline', 'Dave', 'Elenor', 'Freddie']
 short_names = [name for name in names if len(name) < 5]
 capitalized_names = [name.upper() for name in names if len(name) > 5]
+
+numtosquare = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+squared_numbers = [num ** 2 for num in numtosquare]
+print(squared_numbers)
+
+result = [num for num in numtosquare if num % 2 == 0]
+print(result)
+
+
