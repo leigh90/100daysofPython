@@ -61,6 +61,26 @@ def add_credential():
                 webpage.delete(0,END)
                 site_password.delete(0,END)
 
+# ---------------------------- SEARCH CREDENTIAL ------------------------------- #
+def find_password():
+    website = webpage.get()
+    try:
+        with open('data.json', 'r') as data_file:
+            data = json.load(data_file)
+    except FileNotFoundError:
+        messagebox.showwarning(title='File not Found', message='No Data File Found')
+    else:  
+        if website in data:        
+            print(data[website])
+            password = data[website]['password']
+            email = data[website]['email']
+            print(password)
+            messagebox.showinfo(title=f'Credentials for {website}', message=f'Email: {email}, Password: {password}')
+        else:
+            messagebox.showwarning(title='Invalid Input', message=f'There are no existing credentials for {website}')
+
+
+
 
 
 # ---------------------------- UI SETUP ------------------------------- #
@@ -115,6 +135,11 @@ gen_password.grid(column=3, row=3)
 
 add_credential = Button(text="Add Credential",highlightthickness=0, command=add_credential)
 add_credential.grid(column=1, row=4, columnspan=2)
+
+# TODO Search button
+find_password = Button(text="Search",highlightthickness=0, command=find_password)
+find_password.grid(column=3, row=1, columnspan=2)
+
 
 
 
