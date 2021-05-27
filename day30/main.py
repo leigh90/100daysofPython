@@ -43,16 +43,23 @@ def add_credential():
     else:
         is_ok = messagebox.askokcancel(title=website, message=f'Here are your details \n Email:{email} \n Password:{password}')
         if is_ok:
-            with open('data.json', 'r') as data_file:
-                # read json file
-                data = json.load(data_file)
-                # update json file
+            try:
+                with open('data.json', 'r') as data_file:
+                    # read json file
+                    data = json.load(data_file)
+                    # update json file
+            except FileNotFoundError:
+                with open('data.json','w') as data_file:
+                    json.dump(new_data, data_file, indent=4)
+            else:
                 data.update(new_data)
-
-            with open("data.json",'w') as data_file:
-                # write json data
-                json.dump(data,data_file, indent=4)
-                print(data)
+                with open("data.json",'w') as data_file:
+                    # write json data
+                    json.dump(data,data_file, indent=4)
+                    print(data)
+            finally:
+                webpage.delete(0,END)
+                site_password.delete(0,END)
 
 
 
