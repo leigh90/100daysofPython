@@ -1,10 +1,22 @@
 {
-    "AWS": {
+    "Amazon": {
         "email": "ashdev@gmail.com",
-        "password": "13aS7rN!EFmSc!&K"
+        "password": "z!Zdy5*2Jy(m*JVy"
     },
-    "Paaas": {
+    "Jumia": {
         "email": "ashdev@gmail.com",
-        "password": "%j!LCa#N0tX3S"
+        "password": "p*W#o)T2z6gMFB"
+    },
+    "Ebay": {
+        "email": "ashdev@gmail.com",
+        "password": "rgfvJC&(d2C7*!qu5"
+    },
+    "Lock": {
+        "email": "ashdev@gmail.com",
+        "password": "ohsPn59ai0$Tx*9h"
+    },
+    "Sanitizer": {
+        "email": "ashdev@gmail.com",
+        "password": "D0k#P+GzI5Rf4Me"
     }
 }
