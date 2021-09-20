@@ -5,7 +5,7 @@ import os
 # APP_ID=dac25175
 NUTRITIONIX_API_KEY= os.environ['NUTRITIONIX_API_KEY']
 NUTRITIONIX_APP_ID= os.environ['NUTRITIONIX_APP_ID']
-
+SHEETY_TOKEN=os.environ['SHEETY_TOKEN']
 
 # TODO USER INPUT 
 exercise_input = input('What exercise did you do today?')
@@ -54,8 +54,13 @@ print(sheety_get_response)
 print(sheety_get_response.json())
 
 # POST REQUEST
+
+sheety_headers = {
+  "Authorization": f"Bearer {SHEETY_TOKEN}"
+}
 add_params = {
   "workout": {
+
 	"date":workout_date,
     "time": workout_time,
     "exercise": name,
@@ -64,8 +69,10 @@ add_params = {
   }
 } 
 # print(add_params.json())
-sheety_add_response = requests.post(url=sheety_endpoint, json=add_params)
+sheety_add_response = requests.post(url=sheety_endpoint, json=add_params, headers={"Authorization": f"Bearer {SHEETY_TOKEN}"})
 print(sheety_add_response)
 print(sheety_add_response.json())
+print(sheety_add_response.headers)
+
 
 
