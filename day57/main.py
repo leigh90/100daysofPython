@@ -22,9 +22,9 @@ def index():
 
 @app.route('/guess/<guessname>')
 def guess(guessname):
-    parameters = {
-        'name': guessname
-    }
+    # parameters = {
+    #     'name': guessname
+    # }
     # agify_response = requests.get(url="https://api.agify.io",params=parameters)
     # gender_response = requests.get(url="https://api.genderize.io",params=parameters)
     # or 

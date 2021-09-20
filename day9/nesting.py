@@ -14,9 +14,9 @@ travel_log = {
     "France": {
         "cities_visited":["Paris","Lille","Dijon"], 
         'total_visits': 8
-        }
+        },
     "Germany": {
-        "cities_visited":["Berlin","Hamburg","Stuttgart"]},
+        "cities_visited":["Berlin","Hamburg","Stuttgart"],
         "total_visits": 5,
         }
 

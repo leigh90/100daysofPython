@@ -3,7 +3,6 @@ current_time = time.time()
 # t = time.localtime()
 # time_now = time.strftime()
 # print(time_now)
-
 print(current_time)
 
 
